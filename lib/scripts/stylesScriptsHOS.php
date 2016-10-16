@@ -1,30 +1,74 @@
 <html>
     <style>
-        .dropdown:hover .dropdown-menu{
-            display: block;
-            margin-top: 0;
+       
+   #scrollContent{
+	height:186px;
+	overflow:auto;
+	position:relative;
+}body {
+  padding-top: 50px;
+}
+
+.carousel
+{
+	padding:0px;
+
+}
+.carousel-caption 
+{
+  background:rgba(0,0,0,0.2)!important;
+  bottom:0px;
+  text-align:left;
+  padding:5px;
+  left:0px;
+}
+div.carousel-inner div.item img
+{
+padding:0px;
+  background:#ff0;
+}
+
+.list-group-item
+{
+
+  height:172px;
+  vertical-align:middle;
+  font-size:18pt;
+  cursor:pointer;
+}
+.news
+{
+background:#f0f0f0;
+  float:left;
+  height:100%;
+  position:absolute;
+  z-index:20;
+  margin-right:15px;
+  padding:0px;
+
+}
+div.news-container
+{
+padding:0px;
+}
+        
+        .main-nav{
+            background-color:#00324d ; 
+            color: white; 
+            font-family: myFirstFont;
         }
-        
-     
-        
-        
+
         .pull-left>img{
             height: auto;
-            /*padding: -15px;*/
             width: 60%;
             float: none;
         }
-/*         .nav li:hover {
-            color: lightskyblue;
-        }*/
-        
-        .highlight{
-            color: lightskyblue;
+        .nav li:hover {
+            color: lightseagreen;
         }
         
-     .activ{
+        .activ{
             color: lightseagreen;
-            /*background-color: #004E78;*/
         }
         .center {
             margin: auto;
@@ -35,37 +79,42 @@
             padding-top: 10px !important;
             padding-bottom: 10px !important;
             font-size: 15px;
-            /*            border-bottom: 1px solid;*/
         }
+        
         .shrink{
-            /*color: white;*/
+            color: white;
         }
 
         .shrink div  {
             padding-top: 0px !important;
             padding-bottom: 0px !important;
             font-size: 12px;
-            
         }
-        
-        .shrink div>img  {
-            width: 45%;
-                        height: auto;
+
+        .shrink-logo  {
+            width: 40%;
+            height: auto;
+            padding-top: 10px !important;
 
         }
-        
+
         .dropdown-menu{
             padding-left: 0;
             padding-right: 0;
-         /*width: 10%;*/  
+            /*width: 10%;*/  
         }
-        .copyRight{line-height:170%;
-                   font-size:.9em;
-                   color:#999;
-                   margin-bottom:0px;
-                   margin: auto}
 
-        .copyRight a{color:inherit}
+        .copyRight{
+            line-height:170%;
+            font-size:.9em;
+            color:#999;
+            margin-bottom:0px;
+            margin: auto
+        }
+
+        .copyRight a{
+            color:inherit
+        }
 
         body {
             padding-top: 50px
@@ -298,8 +347,6 @@
 
         }
 
-
-
         #btn-signin{
             width: 100%;
             background-color: #090234 ;
@@ -344,15 +391,12 @@
             text-decoration: underline;
         }
     </style>
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link href="lib/css/roboto.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link href="lib/css/material-fullpalette.css" rel="stylesheet">
     <link href="lib/css/ripples.min.css" rel="stylesheet">
     <link href="//fezvrasta.github.io/snackbarjs/lib/snackbar.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">-->
-
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script>
@@ -411,38 +455,22 @@
     <script src="lib/js/ripples.min.js"></script>
     <script src="lib/js/material.min.js"></script>
     <script src="//fezvrasta.github.io/snackbarjs/lib/snackbar.min.js"></script>
-
     <script src="//cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
     <script>
-        $(function () {
-            $.material.init();
-            $(".shor").noUiSlider({
-                start: 40,
-                connect: "lower",
-                range: {
-                    min: 0,
-                    max: 100
-                }
-            });
-
-            $(".svert").noUiSlider({
-                orientation: "vertical",
-                start: 40,
-                connect: "lower",
-                range: {
-                    min: 0,
-                    max: 100
-                }
-            });
-        });
-    </script>
-    <script>
         $(window).scroll(function () {
-            if ($(document).scrollTop() > 45) {
+            if ($(document).scrollTop() > 50) {
                 $('nav').addClass('shrink ');
+                $('logo-image').addClass('shrink-logo');
             } else {
                 $('nav').removeClass('shrink');
+                $('logo-image').removeClass('shrink-logo');
+
             }
         });
     </script>
+    
+      <script>
+ 
+        
+          </script>
 </html>
